@@ -4,3 +4,5 @@
 # VitePress cache directory
 .vitepress/cache
 node_modules
+
+.vitepress\dist

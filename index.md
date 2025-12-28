@@ -23,3 +23,9 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<style scoped>
+.home-music-player {
+  margin: 40px auto;
+  max-width: 600px;
+}
+</style>

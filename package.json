@@ -6,5 +6,9 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "aplayer": "^1.10.1",
+    "vue-use-sound": "^1.1.1"
   }
 }
