@@ -9,6 +9,35 @@
   --border-radius-md: 4px;
   --border-radius-lg: 8px;
   --player-gap: 12px;
+  --primary-color: #3c366b;
+  --primary-light: #5a4f9a;
+  --accent-color: #f472b6;
+}
+
+/* 深色模式变量 */
+html.dark {
+  --primary-color: #a78bfa;
+  --primary-light: #c4b5fd;
+  --accent-color: #f472b6;
+}
+
+/* 全局美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-bg-soft);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-bg-mute);
 }
 
 /* 播放器包装器 */
@@ -17,6 +46,8 @@
   background: var(--vp-c-bg);
   padding: 6px 0;
   margin: 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+  transition: all 0.3s ease;
 }
 
 /* 播放器主容器 */
@@ -36,6 +67,7 @@
   box-shadow: none;
   align-items: center;
   height: var(--player-height);
+  transition: all 0.3s ease;
 }
 
 /* 播放器头部 - 横向紧凑布局 */
@@ -96,8 +128,12 @@
   background: var(--vp-c-bg-mute);
   border-radius: 2px;
   cursor: pointer;
+  transition: height 0.2s ease;
 }
 
+.navbar-music-player .progress-bar-container:hover {
+  height: 4px;
+}
 .navbar-music-player .progress-bar {
   height: 100%;
   background: var(--vp-c-brand);

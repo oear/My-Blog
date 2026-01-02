@@ -71,27 +71,58 @@ const playlist = generatePlaylist()
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "My Blog",
-  description: "A VitePress Site",
+  description: "一个融合音乐播放、技术分享的个人博客平台",
+  lang: 'zh-CN',
+  head: [
+    ['meta', { name: 'theme-color', content: '#3c366b' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '🎵',
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
-    sidebar: [
+      { text: '首页', link: '/' },
+      { text: '🎵 音乐', link: '/music' },
+      { text: '📚 文档', link: '/markdown-examples' },
       {
-        text: 'Examples',
+        text: '更多',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'API 示例', link: '/api-examples' },
+          { text: '关于', link: '/about' }
         ]
       }
     ],
 
+    sidebar: {
+      '/': [
+        {
+          text: '首页',
+          items: [
+            { text: '开始', link: '/' },
+            { text: '音乐库', link: '/music' }
+          ]
+        }
+      ],
+      '/markdown-examples': [
+        {
+          text: '文档',
+          items: [
+            { text: 'Markdown 示例', link: '/markdown-examples' },
+            { text: 'API 示例', link: '/api-examples' }
+          ]
+        }
+      ]
+    },
+
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+      { icon: 'github', link: 'https://github.com' }
+    ],
+
+    footer: {
+      message: '基于 VitePress 构建',
+      copyright: 'Copyright © 2024-present My Blog'
+    }
   },
   vite: {
     ssr: {

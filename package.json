@@ -1,14 +1,44 @@
 {
-  "devDependencies": {
-    "vitepress": "2.0.0-alpha.15"
+  "name": "my-blog",
+  "version": "1.0.0",
+  "description": "一个融合高品质音乐播放、技术分享的现代化个人博客平台",
+  "keywords": [
+    "blog",
+    "music",
+    "vitepress",
+    "vue",
+    "markdown"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "homepage": "https://github.com/yourname/my-blog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourname/my-blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourname/my-blog/issues"
   },
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "serve": "vitepress preview"
   },
   "dependencies": {
     "aplayer": "^1.10.1",
     "vue-use-sound": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vitepress": "2.0.0-alpha.15"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=8.0.0"
   }
 }
